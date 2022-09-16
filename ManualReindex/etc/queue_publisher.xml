@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/publisher.xsd">
+    <publisher topic="manual.full.reindex.queue">
+        <connection name="amqp" exchange="manual.full.reindex.queue.exchange" />
+    </publisher>
+    <publisher topic="partial.indexation.by.id.list.queue">
+        <connection name="amqp" exchange="partial.indexation.by.id.list.queue.exchange" />
+    </publisher>
+</config>

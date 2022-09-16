@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/topology.xsd">
+    <exchange name="manual.full.reindex.queue.exchange" type="topic" connection="amqp">
+        <binding id="ManualFullReindexQueue" topic="manual.full.reindex.queue" destinationType="queue"
+                 destination="manual_full_reindex_queue"/>
+    </exchange>
+    <exchange name="partial.indexation.by.id.list.queue.exchange" type="topic" connection="amqp">
+        <binding id="PartialIndexationByIdListQueue" topic="partial.indexation.by.id.list.queue" destinationType="queue"
+                 destination="partial_indexation_by_id_list_queue"/>
+    </exchange>
+</config>

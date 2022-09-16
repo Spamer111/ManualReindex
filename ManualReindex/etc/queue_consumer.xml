@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/consumer.xsd">
+    <consumer name="ManualFullReindexQueueConsumer" queue="manual_full_reindex_queue" connection="amqp"
+        handler="CL\ManualReindex\Model\Queue\ConsumerFullReindex::process"/>
+
+    <consumer name="PartialIndexationByIdListQueueConsumer" queue="partial_indexation_by_id_list_queue" connection="amqp"
+        handler="CL\ManualReindex\Model\Queue\ConsumerReindexList::process"/>
+</config>

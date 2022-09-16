@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Communication/etc/communication.xsd">
+    <topic name="manual.full.reindex.queue" request="string">
+        <handler name="ManualFullReindexQueueConsumer"
+                 type="CL\ManualReindex\Model\Queue\ConsumerFullReindex" method="process" />
+    </topic>
+    <topic name="partial.indexation.by.id.list.queue" request="CL\ManualReindex\Api\Data\QueueMessageInterface">
+        <handler name="PartialIndexationByIdListQueueConsumer"
+                 type="CL\ManualReindex\Model\Queue\ConsumerReindexList" method="process" />
+    </topic>
+</config>
